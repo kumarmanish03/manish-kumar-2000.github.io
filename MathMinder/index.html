@@ -5,13 +5,50 @@
   <title>Math Minder</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
+<style>
+  footer a{
+margin: 20px;
+padding: 10px;
+text-decoration:none;
+color: black;
+}
+
+footer a:hover{
+opacity: 0.5;
+}
+
+footer{
+padding:20px;
+margin-top:20px;
+color:#ffffff;
+background:#35424a;
+text-align: center;
+}
+
+#str{
+  display: block;
+  margin: 30px;
+}
+</style>
 
 <body class="bg-dark text-white ">
   <header class="bg-secondary text-center p-3 mb-5">
     <h1>Math Minder</h1>
   </header>
   <div class="container text-center">
+
+    <div class="row mt-5" >
+      <div class="col-md-6">
+        <button type="button" id="start" class="btn btn-primary btn-lg">START GAME</button>
+      </div>
+      <div class="col-md-6">
+        <button type="button" value="refresh" id="restart" onclick="history.go(0)" class="btn btn-info btn-lg">RESTART GAME</button>
+      </div>
+    </div>
 
     <div class="row mt-5" >
       <div class="col-md-6">
@@ -30,13 +67,18 @@
       <div class="col-md-6 mx-auto">
         <p class="lead">Evaluate the following Mathematical Expression in 
           <span class="text-success" id="seconds">5</span> Seconds:</p>
-        <h2 class="display-2 mb-5" id="current-word">hello</h2>
+        <h2 class="display-2 mb-5" id="current-word"></h2>
         <input type="text" class="form-control form-control-lg" placeholder="Ans....." id="word-input" autofocus>
         <h4 class="mt-3" id="message" style="color: red"></h4>
 
       </div>
     </div>
   </div>
+
+
+  <footer>
+    <p><a href="https://github.com/manish-kumar-2000"><i class="fa fa-github" style="font-size:35px"></i></a><a href="https://www.facebook.com/profile.php?id=100009172781875"><i class="fa fa-facebook-square" style="font-size:35px"></i></a><a href="https://www.instagram.com/kumarmanish03/"><i class="fa fa-instagram" style="font-size:35px"></i></a></p>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

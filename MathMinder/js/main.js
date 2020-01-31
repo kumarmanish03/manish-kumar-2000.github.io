@@ -1,14 +1,12 @@
-window.addEventListener('load', init);
+//window.addEventListener('load', init);
 
-let time = 5;
-let score = 0;
-let isPlaying;
 
 const wordInput = document.querySelector('#word-input');
 const currentWord = document.querySelector('#current-word');
 const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
+const startButton = document.querySelector("#start");
 
 
 const words = [
@@ -18,7 +16,11 @@ const words = [
   '(100%10)*5',
   '5-4/2+03',
   '(9-15)*(-3)',
-  '19+04-7'
+  '19+04-7',
+  '6%2+10/2',
+  '[(11+9)/2]%3',
+  '100-39%3',
+  '50+9%100*2'
 ];
 
 const words_ans = [
@@ -28,8 +30,17 @@ const words_ans = [
   '0',
   '6',
   '12',
-  '16'
+  '16',
+  '5',
+  '1',
+  '100',
+  '68'
 ];
+
+let score = 0;
+let isPlaying;
+let time = 5;
+
 
 function init() {
   showWord(words);
@@ -86,3 +97,7 @@ function checkStatus() {
     score = -1;
   }
 }
+
+startButton.addEventListener("click", function(){
+	init();
+})
